@@ -1,0 +1,7 @@
+# Fichiers et dossiers à ignorer
+__pycache__/
+*.pyc
+.env
+.DS_Store
+.ipynb_checkpoints/
+data/
