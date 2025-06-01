@@ -11,6 +11,8 @@ def generate_sensor_data(n=100):
         'temperature': np.random.uniform(10, 35, n)
     }
     df = pd.DataFrame(data)
+    # Conversion explicite du timestamp en chaîne de caractères pour compatibilité CSV/Streamlit
+    df['timestamp'] = df['timestamp'].astype(str)
     df.to_csv('data/simulated_sensors.csv', index=False)
     print('Fichier data/simulated_sensors.csv généré.')
 
